@@ -1,0 +1,2 @@
+source /home/chucholoport/upsrj/rtos-sim/src/hello-world/build/bootloader/gdbinit/symbols
+source /home/chucholoport/upsrj/rtos-sim/src/hello-world/build/bootloader/gdbinit/connect

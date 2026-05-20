@@ -1,0 +1,4 @@
+[wokwi]
+version = 1
+firmware = "../src/hello-world/build/hello-world.elf"
+elf = "../src/hello-world/build/hello-world.elf"
