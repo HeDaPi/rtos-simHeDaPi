@@ -12,48 +12,42 @@
     },
     {
       "type": "wokwi-led",
-      "id": "led_fast",
-      "top": -44,
-      "left": 250,
-      "attrs": {
-        "color": "red"
-      }
-    },
-    {
-      "type": "wokwi-led",
-      "id": "led_victim",
-      "top": 80,
-      "left": 250,
+      "id": "ledFast",
+      "top": -80,
+      "left": 220,
       "attrs": {
         "color": "green"
       }
     },
     {
-      "type": "wokwi-resistor",
-      "id": "r_fast",
-      "top": -16,
-      "left": 154,
+      "type": "wokwi-led",
+      "id": "ledSlow",
+      "top": 20,
+      "left": 220,
       "attrs": {
-        "value": "220"
+        "color": "blue"
       }
     },
     {
-      "type": "wokwi-resistor",
-      "id": "r_victim",
-      "top": 108,
-      "left": 154,
-      "attrs": {
-        "value": "220"
-      }
+      "type": "wokwi-logic-analyzer",
+      "id": "logic1",
+      "top": -180,
+      "left": 420,
+      "attrs": {}
     }
   ],
   "connections": [
-    [ "esp:2", "r_fast:1", "green", [ "h0" ] ],
-    [ "r_fast:2", "led_fast:A", "green", [ "h0" ] ],
-    [ "led_fast:C", "esp:GND.1", "black", [ "h0" ] ],
+    [ "esp:TX", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX", "$serialMonitor:TX", "", [] ],
 
-    [ "esp:4", "r_victim:1", "green", [ "h0" ] ],
-    [ "r_victim:2", "led_victim:A", "green", [ "h0" ] ],
-    [ "led_victim:C", "esp:GND.1", "black", [ "h0" ] ]
-  ]
+    [ "esp:2", "ledFast:A", "green", [ "v0" ] ],
+    [ "ledFast:C", "esp:GND.1", "black", [ "v0" ] ],
+
+    [ "esp:4", "ledSlow:A", "blue", [ "v0" ] ],
+    [ "ledSlow:C", "esp:GND.1", "black", [ "v0" ] ],
+
+    [ "esp:2", "logic1:D0", "green", [ "v0" ] ],
+    [ "esp:4", "logic1:D1", "blue", [ "v0" ] ]
+  ],
+  "dependencies": {}
 }
