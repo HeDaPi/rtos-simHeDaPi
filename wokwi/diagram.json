@@ -1,53 +1,22 @@
 {
   "version": 1,
-  "author": "jesus.loport",
+  "author": "RTOS & Robotics",
   "editor": "wokwi",
   "parts": [
     {
       "type": "board-esp32-devkit-c-v4",
-      "id": "esp",
+      "id": "esp32_tx",
       "top": 0,
       "left": 0,
       "attrs": {}
     },
     {
-      "type": "wokwi-led",
-      "id": "ledFast",
-      "top": -80,
-      "left": 220,
-      "attrs": {
-        "color": "green"
-      }
-    },
-    {
-      "type": "wokwi-led",
-      "id": "ledSlow",
-      "top": 20,
-      "left": 220,
-      "attrs": {
-        "color": "blue"
-      }
-    },
-    {
-      "type": "wokwi-logic-analyzer",
-      "id": "logic1",
-      "top": -180,
-      "left": 420,
+      "type": "board-esp32-devkit-c-v4",
+      "id": "esp32_rx",
+      "top": 0,
+      "left": 500,
       "attrs": {}
     }
   ],
-  "connections": [
-    [ "esp:TX", "$serialMonitor:RX", "", [] ],
-    [ "esp:RX", "$serialMonitor:TX", "", [] ],
-
-    [ "esp:2", "ledFast:A", "green", [ "v0" ] ],
-    [ "ledFast:C", "esp:GND.1", "black", [ "v0" ] ],
-
-    [ "esp:4", "ledSlow:A", "blue", [ "v0" ] ],
-    [ "ledSlow:C", "esp:GND.1", "black", [ "v0" ] ],
-
-    [ "esp:2", "logic1:D0", "green", [ "v0" ] ],
-    [ "esp:4", "logic1:D1", "blue", [ "v0" ] ]
-  ],
-  "dependencies": {}
+  "connections": []
 }

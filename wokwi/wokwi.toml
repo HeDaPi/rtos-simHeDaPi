@@ -1,4 +1,12 @@
 [wokwi]
 version = 1
-firmware = "../src/deadlock-demo/build/deadlock-demo.elf"
-elf = "../src/deadlock-demo/build/deadlock-demo.elf"
+
+[[esp32]]
+id = "esp32_tx"
+firmware = "../src/esp-transmisor/build/esp-transmisor.bin"
+flash_size = 4
+
+[[esp32]]
+id = "esp32_rx"
+firmware = "../src/esp-receptor/build/esp-receptor.bin"
+flash_size = 4
