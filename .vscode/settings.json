@@ -1,3 +1,4 @@
 {
-    "idf.currentSetup": "/home/chucholoport/.espressif/v6.0/esp-idf"
+    "idf.currentSetup": "/home/chucholoport/.espressif/v6.0/esp-idf",
+    "cmake.sourceDirectory": "/home/chucholoport/upsrj/rtos-sim/src/msg-queue"
 }
