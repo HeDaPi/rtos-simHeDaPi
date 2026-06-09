@@ -1,22 +1,8 @@
 {
   "version": 1,
-  "author": "RTOS & Robotics",
+  "author": "jesus.loport",
   "editor": "wokwi",
-  "parts": [
-    {
-      "type": "board-esp32-devkit-c-v4",
-      "id": "esp32_tx",
-      "top": 0,
-      "left": 0,
-      "attrs": {}
-    },
-    {
-      "type": "board-esp32-devkit-c-v4",
-      "id": "esp32_rx",
-      "top": 0,
-      "left": 500,
-      "attrs": {}
-    }
-  ],
-  "connections": []
+  "parts": [ { "type": "board-esp32-devkit-c-v4", "id": "esp", "top": 0, "left": 0, "attrs": {} } ],
+  "connections": [ [ "esp:TX", "$serialMonitor:RX", "", [] ], [ "esp:RX", "$serialMonitor:TX", "", [] ] ],
+  "dependencies": {}
 }
