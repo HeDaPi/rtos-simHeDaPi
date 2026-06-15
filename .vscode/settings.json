@@ -1,4 +1,4 @@
 {
-    "idf.currentSetup": "/home/chucholoport/.espressif/v6.0/esp-idf",
-    "cmake.sourceDirectory": "/home/chucholoport/upsrj/rtos-sim/src/msg-queue"
+    "idf.currentSetup": "C:\\esp\\v6.0.1\\esp-idf",
+    "cmake.sourceDirectory": "C:/Users/tries/venv/rtos-simHeDaPi/src/deadlock-demo"
 }

@@ -1,4 +1,4 @@
 [wokwi]
 version = 1
-firmware = "../src/msg-queue/build/msg-queue.elf"
-elf = "../src/msg-queue/build/msg-queue.elf"
+firmware = "../src/multitask-demo/build/multitask-demo.bin"
+elf = '../src/multitask-demo/build/multitask-demo.elf'
